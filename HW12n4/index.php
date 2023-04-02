@@ -1,4 +1,4 @@
 <?php
-$firstName = ['nick', 'ken', 'debora', 'michel'];
-$up = fn($upper) => (mb_strtoupper($upper[0]) . mb_substr($upper, 1,));
+$firstName = ['rick', 'ken', 'debora', 'michel'];
+$up = fn($upper) => (ucfirst($upper));
 print_r(array_map($up, $firstName));
