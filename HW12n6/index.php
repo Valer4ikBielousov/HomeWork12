@@ -4,7 +4,6 @@ function wordsLength(array &$words, int $length): array
     foreach ($words as $key => $word) {
         if (strlen($word) < $length) {
             $words[$key] = $word;
-
         } else {
             unset($words[$key]);
         }
