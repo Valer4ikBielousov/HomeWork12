@@ -1,11 +1,12 @@
 <?php
 function wordsLength(array &$words, int $length): array
 {
-    $newarray = [];
-    foreach ($words as $word) {
+    foreach ($words as $key => $word) {
         if (strlen($word) < $length) {
-            $newarray[] = $word;
-            $words = $newarray;
+            $words[$key] = $word;
+
+        } else {
+            unset($words[$key]);
         }
     }
     return $words;
