@@ -1,11 +1,12 @@
 <?php
-define('MULTIPLAY', 4);
-function product($numbers)
+$n = 4;
+function product($numbers, &$times)
 {
+
     foreach ($numbers as $key => $number) {
-        $numbers[$key] = mb_substr($upper, 1,);
+        $numbers[$key] = $times * $number;
     }
     return $numbers;
 }
 
-print_r(product([2, 5, 7, 4]));
+print_r(product(([2, 5, 2, 3]), $n));
